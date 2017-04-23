@@ -29,21 +29,21 @@ void setup()  {
 }
 
 void loop() {
-  delay(70);                     // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
-  Serial.print("Ping: ");
-  Serial.print(sonar.ping_cm()); // Send ping, get distance in cm and print result (0 = outside set distance range)
-  Serial.print("cm");
+        delay(70);               // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
+        Serial.print("Ping: ");
+        Serial.print(sonar.ping_cm()); // Send ping, get distance in cm and print result (0 = outside set distance range)
+        Serial.print("cm");
 
-  Serial.print("    LIGHT: ");
-  Serial.print(analogRead(LIGHT_SENSOR_ANALOG));
+        Serial.print("    LIGHT: ");
+        Serial.print(analogRead(LIGHT_SENSOR_ANALOG));
 
-  Serial.print("    TEMP: ");
-  Serial.print(analogRead(TEMP_SENSOR));
+        Serial.print("    TEMP: ");
+        Serial.print(analogRead(TEMP_SENSOR));
 
-  Serial.print("    SOUND: ");
-  Serial.print(analogRead(SOUND_SENSOR_ANALOG));
+        Serial.print("    SOUND: ");
+        Serial.print(analogRead(SOUND_SENSOR_ANALOG));
 
-  Serial.print("    IR: ");
-  Serial.println(analogRead(IR_SENSOR));
+        Serial.print("    IR: ");
+        Serial.println(analogRead(IR_SENSOR));
 
 }
