@@ -1,0 +1,19 @@
+{
+  "name": "SpireLib",
+  "keywords": "sensor, servo, potentiometer",
+  "description": "Arduino Library for simplifying reading potentiometer values and more",
+  "repository":
+  {
+    "type": "git",
+    "url": ""
+  },
+  "authors":
+    {
+      "name": "Spirevipp",
+      "url": "https://github.com/Spirevipp",
+      "maintainer": true
+    },
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
