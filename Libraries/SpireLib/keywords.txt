@@ -1,0 +1,6 @@
+Pot           KEYWORD1
+Temp          KEYWORD1
+readServo     KEYWORD2
+readPWM       KEYWORD2
+readHighPWM   KEYWORD2
+readC         KEYWORD2
