@@ -6,7 +6,7 @@ Pot::Pot(int pin)
   _pin = pin;
 }
 
-int Pot::readServo()
+void Pot::readServo()
 {
   _val = analogRead(_pin);
   _val = map(_val, 0, 1023, 0, 180);
@@ -14,7 +14,7 @@ int Pot::readServo()
   return _val;
 }
 
-int Pot::readPWM()
+void Pot::readPWM()
 {
   _val = analogRead(_pin);
   _val = map(_val, 0, 1023, 0, 255);
@@ -22,7 +22,7 @@ int Pot::readPWM()
   return _val;
 }
 
-int Pot::readHighPWM()
+void Pot::readHighPWM()
 {
   _val = analogRead(_pin);
   _val = map(_val, 0, 1023, 120, 255);
@@ -35,7 +35,7 @@ Temp::Temp(int pin)
   _pin = pin;
 }
 
-float Temp::readC()
+void Temp::readC()
 {
   _read = analogRead(_pin);
   _val = (_read / 1024.0) * 5.0;

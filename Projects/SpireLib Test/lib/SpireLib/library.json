@@ -13,7 +13,7 @@
       "url": "https://github.com/Spirevipp",
       "maintainer": true
     },
-  "version": "1.0.1",
+  "version": "1.0.0",
   "frameworks": "arduino",
   "platforms": "*"
 }
