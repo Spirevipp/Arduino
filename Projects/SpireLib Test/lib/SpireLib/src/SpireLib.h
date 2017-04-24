@@ -7,9 +7,9 @@ class Pot
 {
   public:
     Pot(int pin);
-    void readServo();
-    void readPWM();
-    void readHighPWM();
+    int readServo();
+    int readPWM();
+    int readHighPWM();
   private:
     int _pin;
     int _val;
@@ -19,7 +19,7 @@ class Temp
 {
   public:
     Temp(int pin);
-    void readC();
+    float readC();
   private:
     int _pin;
     int _read;
