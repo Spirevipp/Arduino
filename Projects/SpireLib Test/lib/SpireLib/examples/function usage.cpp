@@ -20,7 +20,7 @@ void loop()   {
   //  This reads the value from the potentiometer,
   //  transforms it to a range usable by the servo (0 - 180)
   //  then writes the value to the servo
-  myServo.write(myPot.readServo());
+  myServo.write(servoPot.readServo());
 
   //  This writes a PWM signal to the onboard led
   //  using the value read from the potentiometer
