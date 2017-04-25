@@ -12,18 +12,22 @@
 */
 
 const uint32_t blinkDelay = 1000;
-const uint8_t pinLed = LED_BUILTIN;
+const uint8_t pinLed1 = LED_BUILTIN_RX;
+const uint8_t pinLed2 = LED_BUILTIN_TX;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize led as an output.
-  pinMode(pinLed, OUTPUT);
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinLed2, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(pinLed, HIGH);
+  digitalWrite(pinLed1, HIGH);
+  digitalWrite(pinLed2, LOW);
   delay(blinkDelay);
-  digitalWrite(pinLed, LOW);
+  digitalWrite(pinLed1, LOW);
+  digitalWrite(pinLed2, HIGH);
   delay(blinkDelay);
 }
