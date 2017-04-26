@@ -5,14 +5,17 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/Spirevipp/Arduino/tree/master/Libraries/SpireLib.git"
+    "url": "https://github.com/Spirevipp/Arduino.git"
   },
   "authors":
-    {
-      "name": "Spirevipp",
-      "url": "https://github.com/Spirevipp",
-      "maintainer": true
-    },
+  {
+    "name": "Spirevipp",
+    "url": "https://github.com/Spirevipp",
+    "maintainer": true
+  },
+  "export": {
+    "include": "Libraries/SpireLib"
+  },
   "version": "1.0.1",
   "frameworks": "arduino",
   "platforms": "*"
