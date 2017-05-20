@@ -47,19 +47,20 @@ start the upload process, then plug it in
 https://github.com/digistump/DigistumpArduino/releases
 
 */
-// the setup routine runs once when you press reset:
 void setup() {
-  // initialize the digital pin as an output.
-  pinMode(0, OUTPUT); // LED on Model B
-  pinMode(1, OUTPUT); // LED on Model A
+  for (int i = 0; i < 6; i++) {
+    pinMode(i, OUTPUT);
+  }
 }
 
-// the loop routine runs over and over again forever:
 void loop() {
-  digitalWrite(0, HIGH); // turn the LED on (HIGH is the voltage level)
-  digitalWrite(1, HIGH);
-  delay(1000);          // wait for a second
-  digitalWrite(0, LOW); // turn the LED off by making the voltage LOW
-  digitalWrite(1, LOW);
-  delay(1000); // wait for a second
+  int pr;
+  for (int x = 0; x < 3; x++) {
+    int r = floor(random(0, 6));
+    if (r == pr)
+      r = floor(random(0, 6));
+    digitalWrite(r, !digitalRead(r));
+    pr = r;
+  }
+  delay(200);
 }
