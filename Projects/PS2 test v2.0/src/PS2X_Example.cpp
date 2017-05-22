@@ -2,12 +2,12 @@
 #include <PS2X_lib.h> //for v1.6
 #include <Servo.h>
 
-int verdi1 = 50;
-int verdi2 = 50;
-int verdi3 = 50;
-int verdi4 = 50;
-int verdi5 = 50;
-int klo = 0;
+int verdi1 = 30;
+int verdi2 = 105;
+int verdi3 = 30;
+int verdi4 = 45;
+int verdi5 = 60;
+int klo = 30;
 
 PS2X ps2x; // create PS2 Controller Class
 
@@ -100,16 +100,30 @@ void loop() {
       // servo6 mot 0
       Serial.println("L2");
       klo -= 5;
-      klo = constrain(klo, 0, 180);
-      Serial.print(klo);
+      klo = constrain(klo, 30, 120);
+      Serial.println(klo);
       servo6.write(klo);
     } else if (ps2x.Button(PSB_R2)) {
       // servo6 mot 180
       Serial.println("R2");
       klo += 5;
-      klo = constrain(klo, 0, 180);
-      Serial.print(klo);
+      klo = constrain(klo, 30, 120);
+      Serial.println(klo);
       servo6.write(klo);
+    }
+
+    if (ps2x.Button(PSB_L1)) {
+      Serial.println("L1  ");
+      verdi5 -= 5;
+      verdi5 = constrain(verdi5, 0, 180);
+      Serial.println(verdi5);
+      servo5.write(verdi5);
+    } else if (ps2x.Button(PSB_R1)) {
+      Serial.println("R1  ");
+      verdi5 += 5;
+      verdi5 = constrain(verdi5, 0, 180);
+      Serial.println(verdi5);
+      servo5.write(verdi5);
     }
 
     if (ps2x.Button(PSB_PAD_LEFT)) {
@@ -117,76 +131,61 @@ void loop() {
       Serial.println("LEFT");
       verdi1 -= 5;
       verdi1 = constrain(verdi1, 0, 180);
-      Serial.print(verdi1);
+      Serial.println(verdi1);
       servo1.write(verdi1);
     } else if (ps2x.Button(PSB_PAD_RIGHT)) {
       // servo1 mot 180
       Serial.println("RIGHT");
       verdi1 += 5;
       verdi1 = constrain(verdi1, 0, 180);
-      Serial.print(verdi1);
+      Serial.println(verdi1);
       servo1.write(verdi1);
     }
     if (ps2x.Button(PSB_PAD_UP)) {
       Serial.println("UP");
       verdi2 += 5;
       verdi2 = constrain(verdi2, 0, 180);
-      Serial.print(verdi2);
+      Serial.println(verdi2);
       servo2.write(verdi2);
     } else if (ps2x.Button(PSB_PAD_DOWN)) {
       Serial.println("DOWN");
       verdi2 -= 5;
       verdi2 = constrain(verdi2, 0, 180);
-      Serial.print(verdi2);
+      Serial.println(verdi2);
       servo2.write(verdi2);
     }
 
     if (ps2x.Analog(PSS_LY) > 200) {
       Serial.println("LY  ");
-      Serial.println(ps2x.Analog(PSS_LY));
-      verdi3 += 5;
+      // Serial.println(ps2x.Analog(PSS_LY));
+      verdi3 -= 5;
       verdi3 = constrain(verdi3, 0, 180);
-      Serial.print(verdi3);
+      Serial.println(verdi3);
       servo3.write(verdi3);
     } else if (ps2x.Analog(PSS_LY) < 55) {
       Serial.println("LY  ");
-      Serial.println(ps2x.Analog(PSS_LY));
-      verdi3 -= 5;
+      // Serial.println(ps2x.Analog(PSS_LY));
+      verdi3 += 5;
       verdi3 = constrain(verdi3, 0, 180);
-      Serial.print(verdi3);
+      Serial.println(verdi3);
       servo3.write(verdi3);
-    }
-    if (ps2x.Analog(PSS_RY) > 200) {
-      Serial.println("RX  ");
-      Serial.println(ps2x.Analog(PSS_RY));
-      verdi4 += 5;
-      verdi4 = constrain(verdi4, 0, 180);
-      Serial.print(verdi4);
-      servo4.write(verdi4);
-    } else if (ps2x.Analog(PSS_RY) < 55) {
-      Serial.println("RX  ");
-      Serial.println(ps2x.Analog(PSS_RY));
-      verdi4 -= 5;
-      verdi4 = constrain(verdi4, 0, 180);
-      Serial.print(verdi4);
-      servo4.write(verdi4);
     }
 
     // gjør om til L1 og L2
     if (ps2x.Analog(PSS_RY) > 200) {
       Serial.println("RY  ");
-      Serial.println(ps2x.Analog(PSS_RY));
-      verdi5 += 5;
-      verdi5 = constrain(verdi5, 0, 180);
-      Serial.print(verdi5);
-      servo5.write(verdi5);
+      // Serial.println(ps2x.Analog(PSS_RY));
+      verdi4 += 5;
+      verdi4 = constrain(verdi4, 0, 180);
+      Serial.println(verdi4);
+      servo4.write(verdi4);
     } else if (ps2x.Analog(PSS_RY) < 55) {
       Serial.println("RY  ");
-      Serial.println(ps2x.Analog(PSS_RY));
-      verdi5 -= 5;
-      verdi5 = constrain(verdi5, 0, 180);
-      Serial.print(verdi5);
-      servo5.write(verdi5);
+      // Serial.println(ps2x.Analog(PSS_RY));
+      verdi4 -= 5;
+      verdi4 = constrain(verdi4, 0, 180);
+      Serial.println(verdi4);
+      servo4.write(verdi4);
     }
   }
 
