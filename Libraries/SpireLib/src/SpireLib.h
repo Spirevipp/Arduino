@@ -26,6 +26,8 @@ class Temp
     float _val;
 };
 
+// todo fiks dette
+
 class Clock
 {
 public:

@@ -6,6 +6,8 @@
 int buttonpressed = 5;
 int firstrun = 0;
 
+unsigned long pMil = 0;
+
 char *ssid = "Laksen";
 char *password = "arxofgecrirzu";
 

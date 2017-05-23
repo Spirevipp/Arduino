@@ -34,7 +34,9 @@ float Temp::readC() {
   return _val;
 }
 
-MillisTimer::clock() {_pMillis = 0;}
+// todo fiks dette
+
+Clock::Clock() {_pMillis = 0;}
 
 bool clock::check(unsigned long intervall) {
   _intervall = intervall;
