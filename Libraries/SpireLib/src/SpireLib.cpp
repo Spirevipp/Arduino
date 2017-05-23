@@ -33,3 +33,15 @@ float Temp::readC() {
 
   return _val;
 }
+
+MillisTimer::clock() {_pMillis = 0;}
+
+bool clock::check(unsigned long intervall) {
+  _intervall = intervall;
+  if(_pMillis + _intervall >= millis()){
+    _pMillis = millis();
+    return true;
+  } else {
+    return false;
+  }
+}

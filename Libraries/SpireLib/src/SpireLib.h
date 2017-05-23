@@ -26,4 +26,16 @@ class Temp
     float _val;
 };
 
+class Clock
+{
+public:
+  Clock();
+  bool check();
+
+private:
+  unsigned long _pMillis;
+  unsigned long _intervall;
+  bool _time;
+}
+
 #endif
