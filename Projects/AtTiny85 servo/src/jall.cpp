@@ -50,11 +50,13 @@ https://github.com/digistump/DigistumpArduino/releases
 #include <SimpleServo.h>
 
 #define BUTTON 0
+#define BUTTON2 3
 #define LED_PIN 1
 #define DISTANCE 80
 #define DEFAULT_POS 100
 
 int buttonState = LOW;
+int buttonState2 = LOW;
 SimpleServo servo;
 
 void click();
@@ -69,7 +71,8 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(BUTTON);
-  if (buttonState == HIGH) {
+  buttonState2 = digitalRead(BUTTON2);
+  if (buttonState == HIGH || buttonState2 == HIGH) {
     click();
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
   }

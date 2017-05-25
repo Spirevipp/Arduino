@@ -10,8 +10,8 @@ int firstrun = 0;
 unsigned long pMil = 0;
 bool enableBlink = false;
 
-char *ssid = "Laksen";
-char *password = "arxofgecrirzu";
+char *ssid = "InternettVG3";
+char *password = "Pa$$w0rd";
 
 WiFiServer server(80); // Define Web Server Port
 
