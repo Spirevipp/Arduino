@@ -10,6 +10,7 @@ unsigned long sek = 0;
 unsigned long min = 0;
 unsigned long mil = 0;
 unsigned long hr = 0;
+
 unsigned long psek = 0;
 unsigned long pmin = 0;
 unsigned long pmil = 0;
