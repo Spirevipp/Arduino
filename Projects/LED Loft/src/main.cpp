@@ -24,7 +24,7 @@ void setup() {
   for (int i = 0; i < 14; i++) {
     pinMode(i, INPUT_PULLUP);
   }
-  for (int i = firstPin; i < lastPin; i++) {
+  for (int i = firstPin; i <= lastPin; i++) {
     pinMode(i, OUTPUT);
   }
 }
