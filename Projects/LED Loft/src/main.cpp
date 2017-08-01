@@ -1,5 +1,6 @@
 #include <Arduino.h>
-#include <LiquidCrystal.h>
+// No display ATM
+//#include <LiquidCrystal.h>
 
 // Defines
 #define firstPin 2
@@ -10,14 +11,16 @@
 #define buttonB 7
 #define buttonW 8
 
-#define displayPower 2
+//#define displayPower 2
 
 // Function initializers
-void showDisplay();
+// void showDisplay();
 
 // Variables
-unsigned long displayTimer = 0;
-bool buttonPressed = false;
+// unsigned long displayTimer = 0;
+// bool buttonPressed = false;
+
+// LiquidCrystal lcd();
 
 void setup() {
 
@@ -30,15 +33,18 @@ void setup() {
 }
 
 void loop() {
+
+  /*
   if (digitalRead(buttonR) == LOW || digitalRead(buttonG) == LOW ||
       digitalRead(buttonB) == LOW || digitalRead(buttonW) == LOW) {
     buttonPressed = true;
   }
   showDisplay();
+  */
 }
 
 // Functions
-
+/*
 void showDisplay() {
   bool isActive;
   if (buttonPressed) {
@@ -60,3 +66,4 @@ void showDisplay() {
     // Current brightness
   }
 }
+*/

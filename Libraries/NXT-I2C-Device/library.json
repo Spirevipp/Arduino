@@ -1,0 +1,22 @@
+{
+  "name": "NXT-I2C-Device",
+  "keywords": "LEGO, NXT, I2C",
+  "description": "Arduino Library for I2C connection to LEGO NXT Sensors, made by XLCTEAM https://github.com/xlcteam/NXTI2CDevice",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Spirevipp/Arduino.git"
+  },
+  "authors":
+  {
+    "name": "Spirevipp",
+    "url": "https://github.com/Spirevipp",
+    "maintainer": true
+  },
+  "export": {
+    "include": "Libraries/NXT-I2C-Device"
+  },
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
